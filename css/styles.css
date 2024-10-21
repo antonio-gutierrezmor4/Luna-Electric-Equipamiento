@@ -10851,12 +10851,12 @@ img:hover {
 /* Mobile Version */
 @media (max-width: 768px) {
     .carousel {
-        height: 250px;  /* Más compacto en móvil */
+        height: 200px;  /* Más compacto en móvil */
         width: 90%;  /* Ocupa menos en móvil */
     }
 
     .slides img {
-        height: 305px;  /* Asegura que la imagen mantenga proporciones en móvil */
+        height: 220px;  /* Asegura que la imagen mantenga proporciones en móvil */
     }
 }
 
