@@ -9039,7 +9039,7 @@ footer {
     .header-alert-news b{font-weight: var(--weight-500); font-size: var(--fs-9); padding-right: 5px;} 
 
     .header-main .header-logo img{
-        width: 250px;
+        width: 500px;
     }
 
     .header-social-container,
@@ -10809,7 +10809,7 @@ img:hover {
 /* Carousel container */
 .carousel {
     width: 70%;  /* Ocupa el 80% del ancho */
-    height: 430px;  /* Altura fija */
+    height: 570px;  /* Altura fija */
     overflow: hidden;
     position: relative;
     margin: 50px auto;  /* Centrado en la pantalla */
@@ -10874,3 +10874,5 @@ background-color: hsla(0, 0%, 0%, 0.1);
     padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
+
+
