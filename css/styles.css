@@ -10809,7 +10809,7 @@ img:hover {
 /* Carousel container */
 .carousel {
     width: 70%;  /* Ocupa el 80% del ancho */
-    height: 450px;  /* Altura fija */
+    height: 650px;  /* Altura fija */
     overflow: hidden;
     position: relative;
     margin: 50px auto;  /* Centrado en la pantalla */
