@@ -10808,7 +10808,7 @@ img:hover {
 
 /* Carousel container */
 .carousel {
-    width: 70%;  /* Ocupa el 80% del ancho */
+    width: 80%;  /* Ocupa el 80% del ancho */
     height: 650px;  /* Altura fija */
     overflow: hidden;
     position: relative;
@@ -10849,9 +10849,9 @@ img:hover {
 }
 
 /* Mobile Version */
-@media (max-width: 768px) {
+@media (max-width: 488px) {
     .carousel {
-        height: 200px;  /* Más compacto en móvil */
+        height: 220px;  /* Más compacto en móvil */
         width: 90%;  /* Ocupa menos en móvil */
     }
 
