@@ -214,247 +214,130 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style>
- 
-    /* Estilos generales para el contenedor */
-    .product-card {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        padding: 50px 20px;
-        background-color: #f2f2f2; /* Fondo suave y elegante */
-        max-width: 1200px; /* Limita el ancho máximo del contenedor */
-        margin: 0 auto; /* Centra el contenedor en la página */
-    }
-    
-    /* Estilos para cada tarjeta */
-    .product-card {
-        width: 250px; /* Tamaño más grande para las tarjetas */
-        background-color: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
-        overflow: hidden;
-        cursor: pointer;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #e0e0e0; /* Borde sutil */
-    }
-    
-    .product-card:hover {
-        transform: translateY(-10px); /* Mayor elevación al hacer hover */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda al hacer hover */
-    }
-    
-    /* Estilo de la imagen */
-    .product-image {
-        width: 100%;
-        height: 200px; /* Tamaño ampliado de la imagen */
-        background-size: cover;
-        background-position: center;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover .product-image {
-        transform: scale(1.08); /* Mayor ampliación al hacer hover */
-    }
-    
-    /* Título de la tarjeta */
-    .product-name {
-        font-family: 'Georgia', serif;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #2c3e50; /* Azul oscuro elegante */
-        padding: 20px;
-        background-color: #fdfdfd; /* Fondo claro */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        transition: color 0.3s ease;
-    }
-    
-    .product-card:hover .product-name {
-        color: #b48800; /* Color dorado al hacer hover */
-    }
-    
-    /* Agregar borde inferior dorado */
-    .product-card::after {
-        content: '';
-        display: block;
-        height: 5px;
-        background-color: #b48800; /* Borde inferior en color dorado */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-    
-    /* Efecto de transición en las imágenes */
-    .product-image {
-        transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover .product-image {
-        transform: scale(1.1); /* Mayor efecto de zoom al hacer hover */
-    }
-    
-    </style>
+  /* Contenedor principal de productos */
+  .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas adaptativas */
+      gap: 20px;
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+  }
 
+  /* Estilos para cada tarjeta */
+  .product-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+  }
 
+  /* Efecto hover para cada tarjeta */
+  .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
 
+  /* Imagen de producto */
+  .product-image {
+      width: 85%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      transition: transform 0.5s ease;
+  }
 
+  /* Aumenta el tamaño de la imagen en hover */
+  .product-card:hover .product-image {
+      transform: scale(1.08);
+  }
 
+  /* Información del producto */
+  .product-info {
+      padding: 20px;
+      background-color: #fdfdfd;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
 
+  /* Nombre del producto */
+  .product-name {
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin: 10px 0;
+  }
 
+  /* Descripción del producto */
+  .product-description {
+      font-size: 0.9rem;
+      color: #555;
+      opacity: 0.8;
+  }
 
-
-
-
-
-
+  /* Borde inferior dorado en cada tarjeta */
+  .product-card::after {
+      content: '';
+      display: block;
+      height: 5px;
+      background-color: #b48800;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+</style>
 
 <section class="product-container">
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2400/01J5XDCBVXH4BG6A7DFCEVKXFQ.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/810/CTV-110-1.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Congeladora Dual Tapa de Vidrio</h3>
+          <p class="product-description">CTV-110, 110 Lts</p>
+      </div>
+  </div>
 
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2401/01J5XDDBXVHF8F6QV5PP8E1N66.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/1706/XZC7GnrpdsXl6ZviE1EoauI9SfBcNe-metaQ1RWLTE2MEMtLUNlbml0YWwtZGVyZWNoYS5qcGc%3D-.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Congeladora Dual Tapa de Vidrio Curvo</h3>
+          <p class="product-description">CTV-160C, 156 Lts</p>
+      </div>
+  </div>
 
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2403/01J5XDJPBYTH4F0WFM88PC3CAV.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/819/CTV-220Q_03.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Congeladora Dual Tapa Vidrio Curvo</h3>
+          <p class="product-description">CTV-220Q, 220 Lts</p>
+      </div>
+  </div>
 
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2405/01J5XDPBGKMAAYKG1RGQX10KKT.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/1903/01HN0K2ZWMM5EBG0P8X0WEDV72.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Congeladora Dual Tapa de Vidrio Curvo</h3>
+          <p class="product-description">CTV-320Q, 320 Lts</p>
+      </div>
+  </div>
 
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2404/01J5XDMGDFJP40W8SJ6Q0ZDDKA.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/182/CTV-300I.png');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Congeladora Dual Tapa de Vidrio Inclinado</h3>
+          <p class="product-description">CTV-340l, 336 Lts</p>
+      </div>
+  </div>
 
-    <div class="product-card" onclick="window.location.href=' https://ventus-media.s3.amazonaws.com/2400/01J5XDCBVXH4BG6A7DFCEVKXFQ.pdf'">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/810/CTV-110-1.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Tapa de Vidrio</h3> 
-            <p class="product-description">CTV-110, 110 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ventus-media.s3.amazonaws.com/2401/01J5XDDBXVHF8F6QV5PP8E1N66.pdf'">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/1706/XZC7GnrpdsXl6ZviE1EoauI9SfBcNe-metaQ1RWLTE2MEMtLUNlbml0YWwtZGVyZWNoYS5qcGc%3D-.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Tapa de Vidrio Curvo</h3> 
-            <p class="product-description">CTV-160C, 156 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ventus-media.s3.amazonaws.com/2403/01J5XDJPBYTH4F0WFM88PC3CAV.pdf'">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/819/CTV-220Q_03.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Tapa Vidrio Curvo</h3> 
-            <p class="product-description">CTV-220Q, 220 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ventus-media.s3.amazonaws.com/2405/01J5XDPBGKMAAYKG1RGQX10KKT.pdf'">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/1903/01HN0K2ZWMM5EBG0P8X0WEDV72.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Tapa de Vidrio Curvo</h3> 
-            <p class="product-description">CTV-320Q, 320 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ventus-media.s3.amazonaws.com/2404/01J5XDMGDFJP40W8SJ6Q0ZDDKA.pdf'">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/182/CTV-300I.png);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Tapa de Vidrio Inclinado</h3> 
-            <p class="product-description">CTV-340l, 336 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2406/01J5XDQ95K38HTH8EKG8BCKSEG.pdf '">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/1916/01HN0MQJRP0YSK2EQZ04ZA046D.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Puerta de Vidrio Inclinado</h3> 
-            <p class="product-description">CTV-400I, 400 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ventus-media.s3.amazonaws.com/2407/01J5XDR4R4R3XCNYQRE4TJB4EF.pdf'">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/2359/01J4HFMTYC0R4NR5ZHSBF3SN9Y.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Tapa Dura</h3> 
-            <p class="product-description">CTVD-330, 330 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2408/01J5XDS289Y4SD551RDT828QF7.pdf '">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/2117/01HN3X6M648HQNPQ5YXNZSY1DW.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Doble Tapa Dura</h3> 
-            <p class="product-description">CTVD-430, 430 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2409/01J5XDSWY4WH7220CEFJDBADM5.pdf '">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/792/CTVD-500-12-2021.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Doble Tapa Dura</h3> 
-            <p class="product-description">CTVD-500, 473 Lts</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ventus-media.s3.amazonaws.com/2410/01J5XDTSQ66P4A7HZKPKQ68FCP.pdf'">  
-        <div class="product-image" style="background-image: url(https://ventus-media.s3.amazonaws.com/2133/01HN3XS0D1JV3REKX8KGQB5GP1.jpg);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Congeladora Dual Doble Tapa Dura</h3> 
-            <p class="product-description">CTVD-600, 600 Lts</p> 
-        </div>
-    </div>
-    
-    
-    
-    
-    
-    
-      
-    
-    
-
-
-
-
-
-
-
-
-
+  <!-- Continúa con las demás tarjetas de productos... -->
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

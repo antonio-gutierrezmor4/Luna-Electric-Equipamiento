@@ -214,311 +214,149 @@
 
 
 
-
-
 <style>
- 
-    /* Estilos generales para el contenedor */
-    .product-card {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 50px 20px;
-        background-color: #f2f2f2; /* Fondo suave y elegante */
-        max-width: 1200px; /* Limita el ancho máximo del contenedor */
-        margin: 0 auto; /* Centra el contenedor en la página */
-    }
-    
-    /* Estilos para cada tarjeta */
-    .product-card {
-        width: 250px; /* Tamaño más grande para las tarjetas */
-        background-color: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
-        overflow: hidden;
-        cursor: pointer;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #e0e0e0; /* Borde sutil */
-    }
-    
-    .product-card:hover {
-        transform: translateY(-10px); /* Mayor elevación al hacer hover */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda al hacer hover */
-    }
-    
-    /* Estilo de la imagen */
-    .product-image {
-        width: 100%;
-        height: 200px; /* Tamaño ampliado de la imagen */
-        background-size: cover;
-        background-position: center;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover .product-image {
-        transform: scale(1.08); /* Mayor ampliación al hacer hover */
-    }
-    
-    /* Título de la tarjeta */
-    .product-name {
-        font-family: 'Georgia', serif;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #2c3e50; /* Azul oscuro elegante */
-        padding: 20px;
-        background-color: #fdfdfd; /* Fondo claro */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        transition: color 0.3s ease;
-    }
-    
-    .product-card:hover .product-name {
-        color: #b48800; /* Color dorado al hacer hover */
-    }
-    
-    /* Agregar borde inferior dorado */
-    .product-card::after {
-        content: '';
-        display: block;
-        height: 5px;
-        background-color: #b48800; /* Borde inferior en color dorado */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-    
-    /* Efecto de transición en las imágenes */
-    .product-image {
-        transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover .product-image {
-        transform: scale(1.1); /* Mayor efecto de zoom al hacer hover */
-    }
-    
-    </style>
+  /* Contenedor principal de productos */
+  .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Configura columnas adaptables */
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+  }
 
+  /* Estilos para cada tarjeta */
+  .product-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
 
+  /* Efecto hover para cada tarjeta */
+  .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
 
+  /* Imagen de producto */
+  .product-image {
+      width: 100%;
+      height: 200px;
+      background-size: contain; /* Muestra la imagen completa sin recortes */
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.5s ease;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  }
 
+  /* Aumenta el tamaño de la imagen en hover */
+  .product-card:hover .product-image {
+      transform: scale(1.05);
+  }
 
+  /* Información del producto */
+  .product-info {
+      padding: 15px;
+  }
 
+  /* Nombre del producto */
+  .product-name {
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+  }
 
+  /* Descripción del producto */
+  .product-description {
+      font-size: 0.9rem;
+      color: #555;
+      opacity: 0.8;
+  }
 
-
-
-
-
-
+  /* Borde inferior dorado en cada tarjeta */
+  .product-card::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: #b48800;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+</style>
 
 <section class="product-container">
+  <div class="product-card" onclick="window.location.href='p1.html '">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/294/VB-7L-1.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Batidora Planetaria VB-7L</h3> 
+          <p class="product-description">7 Lts bowl</p> 
+      </div>
+  </div>
 
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_AMA-15M.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/AMA-15M-1_360x.jpg?v=1673472480);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Amasadora monofásica de 15 kilos de capacidad</h3> 
-        <p class="product-description">AMA-15M</p> 
-    </div>
-</div>
+  <div class="product-card" onclick="window.location.href='p2.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/450/VAM-60L-40L-20L.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name">Amasadora Industrial VAM-20L</h3> 
+          <p class="product-description">20 Lts bowl</p> 
+      </div>
+  </div>
 
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_AMA-25M.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/AMA-25M-1_360x.jpg?v=1673540200);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Amasadora monofásica de 25 kilos de capacidad</h3> 
-        <p class="product-description">AMA-25M</p> 
-    </div>
-</div>
+  <div class="product-card" onclick="window.location.href='p3.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/441/VAM-60L-40L-20L.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Amasadora Industrial VAM-40L</h3> 
+          <p class="product-description">40 Lts bowl</p> 
+      </div>
+  </div>
 
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_B-10L.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/B-10L_378ae76e-1edb-4908-99f8-013d5be93c90_360x.jpg?v=1705350910);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Batidora industrial de 10L</h3> 
-        <p class="product-description">B-10L</p> 
-    </div>
-</div>
+  <div class="product-card" onclick="window.location.href='p4.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/511/VB-10L_2.jpg');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Batidora Industrial VB-10L</h3> 
+          <p class="product-description">10 Lts bowl</p> 
+      </div>
+  </div>
 
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_B-20L.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/B-20L_360x.jpg?v=1705350937);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Batidora industrial de 20L</h3> 
-        <p class="product-description">B-20L</p> 
-    </div>
-</div>
+  <div class="product-card" onclick="window.location.href='p5.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/285/VB-20L-1-1.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name">Batidora Industrial VB-20L</h3> 
+          <p class="product-description">20 Lts bowl</p> 
+      </div>
+  </div>
 
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_B-30L.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/B-30L_f9eb118d-6457-40a5-9fe4-ef1626d97236_360x.jpg?v=1705350949);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Batidora industrial de 30L</h3> 
-        <p class="product-description">B-30L</p> 
-    </div>
-</div>
+  <div class="product-card" onclick="window.location.href='p6.html '">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/432/VAM-60L-40L-20L.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Amasadora Industrial VAM-60L</h3> 
+          <p class="product-description">60 Lts bowl</p> 
+      </div>
+  </div>
 
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_HC-10000.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/HC-10000-1_360x.jpg?v=1673544230);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Horno convector a gas de 10 repisas</h3> 
-        <p class="product-description">HC-10000</p> 
-    </div>
-</div>
+  <div class="product-card" onclick="window.location.href='p7.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/276/VB-20L-1.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Batidora Industrial VB-30L</h3> 
+          <p class="product-description">3O Lts bowl</p> 
+      </div>
+  </div>
 
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_HC-5000.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/HC-5000-1_360x.jpg?v=1673545012);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Horno convector a gas de 5 repisas</h3> 
-        <p class="product-description">HC-5000</p> 
-    </div>
-</div>
+  
 
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_HCM-400.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/HCM-400producto_360x.jpg?v=1679677046);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Horno convector eléctrico de sobremesa</h3> 
-        <p class="product-description">HCM-400</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_HCM-200.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/FRICANOX1237_360x.jpg?v=1725979081);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Horno convector eléctrico pequeño de sobremesa</h3> 
-        <p class="product-description">HCM-200</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_DO-1600.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/DO-1600_2_360x.jpg?v=1729613739);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Horno Deshidratador de 16 bandejas</h3> 
-        <p class="product-description">DO-1600</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_DO-3000.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/DO-3000-55_360x.png?v=1724948737);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Horno Deshidratador de 30 bandejas</h3> 
-        <p class="product-description">DO-3000</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_DO-800.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/DO-800_2_360x.jpg?v=1729613591);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Horno Deshidratador de 8 bandejas</h3> 
-        <p class="product-description">DO-800</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRD-1500AI.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/FRICANOX1548_540x.jpg?v=1725982759);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada de vidrio curvo VRD-1500AI</h3> 
-        <p class="product-description">VRD-1500AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRD-1250AI.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRD-1250AI_2_360x.jpg?v=1728069101);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada vidrio curvo VRD-1250AI</h3> 
-        <p class="product-description">VRD-1250AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRDH-1250AI.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/VRDH-1250AIproductos_360x.jpg?v=1679686747);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada curva de Acero Inoxidable mediana marca Ilumi</h3> 
-        <p class="product-description">VRDH-1250AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRDH-1500AI.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/VRDH-1500AIproductos_360x.jpg?v=1679686672);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada curva de Acero Inoxidable grande marca Ilumi</h3> 
-        <p class="product-description">VRDH-1500AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRF-1250AI.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRF-1250AI_360x.jpg?v=1686318997);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada vidrio plano VRF-1250AI</h3> 
-        <p class="product-description">VRF-1250AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRF-1500AI.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRF-1500AI_2_360x.jpg?v=1728069544);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada vidrio plano VRF-1500AI</h3> 
-        <p class="product-description">VRF-1500AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRFH-1000AI.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRFH-1000AI_3_360x.jpg?v=1728069659);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada vidrio plano VRFH-1000AI</h3> 
-        <p class="product-description">VRFH-1000AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRFH-1250AI.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRFH-1250AI_2_360x.jpg?v=1728069734);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada vidrio plano VRFH-1250AI</h3> 
-        <p class="product-description">VRFH-1250AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRFH-1500AI.jpg '">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRFH-1500AI_3_360x.jpg?v=1728070509);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Vitrina refrigerada vidrio plano VRFH-1500AI</h3> 
-        <p class="product-description">VRFH-1500AI</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_WR-01.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/wr-01-17_360x.png?v=1721942607);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Waflera de 1 disco</h3> 
-        <p class="product-description">WR-01</p> 
-    </div>
-</div>
-
-<div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_WR-02.jpg'">  
-    <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/WR-02_2_360x.jpg?v=1729634822);"></div> 
-    <div class="product-info">
-        <h3 class="product-name">Waflera de 2 discos</h3> 
-        <p class="product-description">WR-02</p> 
-    </div>
-</div>
-
-
-
-
-
-
-
-  <!-- Continúa agregando más productos como estos -->
+  <!-- Añadir más tarjetas aquí según sea necesario -->
 </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

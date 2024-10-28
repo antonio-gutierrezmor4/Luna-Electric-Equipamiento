@@ -216,208 +216,135 @@
 
 
 <style>
- 
-    /* Estilos generales para el contenedor */
-    .product-card {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        padding: 50px 20px;
-        background-color: #f2f2f2; /* Fondo suave y elegante */
-        max-width: 1200px; /* Limita el ancho máximo del contenedor */
-        margin: 0 auto; /* Centra el contenedor en la página */
-    }
-    
-    /* Estilos para cada tarjeta */
-    .product-card {
-        width: 250px; /* Tamaño más grande para las tarjetas */
-        background-color: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
-        overflow: hidden;
-        cursor: pointer;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #e0e0e0; /* Borde sutil */
-    }
-    
-    .product-card:hover {
-        transform: translateY(-10px); /* Mayor elevación al hacer hover */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda al hacer hover */
-    }
-    
-    /* Estilo de la imagen */
-    .product-image {
-        width: 100%;
-        height: 200px; /* Tamaño ampliado de la imagen */
-        background-size: cover;
-        background-position: center;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover .product-image {
-        transform: scale(1.08); /* Mayor ampliación al hacer hover */
-    }
-    
-    /* Título de la tarjeta */
-    .product-name {
-        font-family: 'Georgia', serif;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #2c3e50; /* Azul oscuro elegante */
-        padding: 20px;
-        background-color: #fdfdfd; /* Fondo claro */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        transition: color 0.3s ease;
-    }
-    
-    .product-card:hover .product-name {
-        color: #b48800; /* Color dorado al hacer hover */
-    }
-    
-    /* Agregar borde inferior dorado */
-    .product-card::after {
-        content: '';
-        display: block;
-        height: 5px;
-        background-color: #b48800; /* Borde inferior en color dorado */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-    
-    /* Efecto de transición en las imágenes */
-    .product-image {
-        transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover .product-image {
-        transform: scale(1.1); /* Mayor efecto de zoom al hacer hover */
-    }
-    
-    </style>
+  /* Contenedor principal de productos */
+  .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Configura columnas adaptables */
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+  }
 
+  /* Estilos para cada tarjeta */
+  .product-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
 
+  /* Efecto hover para cada tarjeta */
+  .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
 
+  /* Imagen de producto */
+  .product-image {
+      width: 100%;
+      height: 200px;
+      background-size: contain; /* Muestra la imagen completa sin recortes */
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.5s ease;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  }
 
+  /* Aumenta el tamaño de la imagen en hover */
+  .product-card:hover .product-image {
+      transform: scale(1.05);
+  }
 
+  /* Información del producto */
+  .product-info {
+      padding: 15px;
+  }
 
+  /* Nombre del producto */
+  .product-name {
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+  }
 
+  /* Descripción del producto */
+  .product-description {
+      font-size: 0.9rem;
+      color: #555;
+      opacity: 0.8;
+  }
 
-
-
-
-
-
-
-
+  /* Borde inferior dorado en cada tarjeta */
+  .product-card::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: #b48800;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+</style>
 
 <section class="product-container">
 
-    <div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRFH-1500AI.jpg'">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRFH-1500AI_3_1080x.jpg?v=1728070509);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada vidrio plano</h3> 
-            <p class="product-description">VRFH-1500AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRFH-1250AI.jpg'">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRFH-1250AI_2_1080x.jpg?v=1728069734);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada vidrio plano</h3> 
-            <p class="product-description">VRFH-1250AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRFH-1000AI.jpg'">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRFH-1000AI_3_1080x.jpg?v=1728069659);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada vidrio plano</h3> 
-            <p class="product-description">VRFH-1000AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRF-1500AI.jpg '">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRF-1500AI_2_1080x.jpg?v=1728069544);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada vidrio plano</h3> 
-            <p class="product-description">VRF-1500AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRF-1250AI.jpg'">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRF-1250AI_1080x.jpg?v=1686318997);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada vidrio plano</h3> 
-            <p class="product-description">VRF-1250AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRDH-1500AI.jpg '">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/VRDH-1500AIproductos_1080x.jpg?v=1679686672);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada curva de Acero Inoxidable grande marca Ilumi</h3> 
-            <p class="product-description">VRDH-1500AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href='https://cdn.shopify.com/s/files/1/0698/8424/8355/files/Boton_ficha_tecnica.png '">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/products/VRDH-1250AIproductos_1080x.jpg?v=1679686747);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada curva de Acero Inoxidable mediana marca Ilumi</h3> 
-            <p class="product-description">VRDH-1250AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRD-1250AI.jpg'">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VRD-1250AI_2_1080x.jpg?v=1728069101);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada vidrio curvo</h3> 
-            <p class="product-description">VRD-1250AI</p> 
-        </div>
-    </div>
-    
-    <div class="product-card" onclick="window.location.href=' https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VRD-1500AI.jpg'">  
-        <div class="product-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/FRICANOX1548_1728x.jpg?v=1725982759);"></div> 
-        <div class="product-info">
-            <h3 class="product-name">Vitrina refrigerada de vidrio curvo</h3> 
-            <p class="product-description">VRD-1500AI</p> 
-        </div>
-    </div>
-    
-    </section>
+  <div class="product-card" onclick="window.location.href='n1.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/957/Vitrina-Mantenedora-VP-1000E3.jpg');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Vitrina Mantenedora Curva VP-1000E3</h3> 
+          <p class="product-description">1.0 mt</p> 
+      </div>
+  </div>
+  
+  <div class="product-card" onclick="window.location.href='n2.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/2232/01HRA8ZG3NKMMM2Y613S082Z3C.jpg');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Vitrina Mantenedora Curva VP-1500E3</h3> 
+          <p class="product-description">1.50 mt</p> 
+      </div>
+  </div>
+  
+  <div class="product-card" onclick="window.location.href='n3.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/342/VP-1000EC3-4.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name"> Vitrina Mantenedora Cuadrada VP-1000EC3</h3> 
+          <p class="product-description">1.0 mt</p> 
+      </div>
+  </div>
+  
+  <div class="product-card" onclick="window.location.href='n4.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/524/VP-1500EC3-2.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name">Vitrina Mantenedora Cuadrada VP-1500EC3</h3> 
+          <p class="product-description">1.50 mt</p> 
+      </div>
+  </div>
+  
+  <div class="product-card" onclick="window.location.href='n5.html'">  
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/245/VERTW-100A.png');"></div> 
+      <div class="product-info">
+          <h3 class="product-name">Vitrina Mantenedora Sobremesa VERTW-100</h3> 
+          <p class="product-description">0.70 cm</p> 
+      </div>
+  </div>
+  
+ 
+  
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</section>
 
 
 

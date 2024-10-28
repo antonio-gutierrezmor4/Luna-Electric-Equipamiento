@@ -225,101 +225,90 @@
 
 
 
-
-
-
-
-
 <style>
- 
-    /* Estilos generales para el contenedor */
-    .product-card {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+    /* Contenedor principal de productos */
+    .product-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Configura columnas adaptables */
+        gap: 20px;
         justify-content: center;
-        padding: 50px 20px;
-        background-color: #f2f2f2; /* Fondo suave y elegante */
-        max-width: 1200px; /* Limita el ancho máximo del contenedor */
-        margin: 0 auto; /* Centra el contenedor en la página */
+        padding: 30px 10px;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #f2f2f2;
     }
-    
+
     /* Estilos para cada tarjeta */
     .product-card {
-        width: 250px; /* Tamaño más grande para las tarjetas */
         background-color: #ffffff;
         border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         cursor: pointer;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #e0e0e0; /* Borde sutil */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
-    
+
+    /* Efecto hover para cada tarjeta */
     .product-card:hover {
-        transform: translateY(-10px); /* Mayor elevación al hacer hover */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda al hacer hover */
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
-    
-    /* Estilo de la imagen */
+
+    /* Imagen de producto */
     .product-image {
         width: 100%;
-        height: 200px; /* Tamaño ampliado de la imagen */
-        background-size: cover;
+        height: 200px;
+        background-size: contain; /* Muestra la imagen completa sin recortes */
+        background-repeat: no-repeat;
         background-position: center;
+        transition: transform 0.5s ease;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
-        transition: transform 0.5s ease;
     }
-    
+
+    /* Aumenta el tamaño de la imagen en hover */
     .product-card:hover .product-image {
-        transform: scale(1.08); /* Mayor ampliación al hacer hover */
+        transform: scale(1.05);
     }
-    
-    /* Título de la tarjeta */
+
+    /* Información del producto */
+    .product-info {
+        padding: 15px;
+    }
+
+    /* Nombre del producto */
     .product-name {
         font-family: 'Georgia', serif;
         font-size: 1.1rem;
         font-weight: bold;
-        color: #2c3e50; /* Azul oscuro elegante */
-        padding: 20px;
-        background-color: #fdfdfd; /* Fondo claro */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        transition: color 0.3s ease;
+        color: #2c3e50;
+        margin-bottom: 5px;
     }
-    
-    .product-card:hover .product-name {
-        color: #b48800; /* Color dorado al hacer hover */
+
+    /* Descripción del producto */
+    .product-description {
+        font-size: 0.9rem;
+        color: #555;
+        opacity: 0.8;
     }
-    
-    /* Agregar borde inferior dorado */
+
+    /* Borde inferior dorado en cada tarjeta */
     .product-card::after {
         content: '';
         display: block;
-        height: 5px;
-        background-color: #b48800; /* Borde inferior en color dorado */
+        height: 4px;
+        background-color: #b48800;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
     }
-    
-    /* Efecto de transición en las imágenes */
-    .product-image {
-        transition: transform 0.5s ease;
-    }
-    
-    .product-card:hover .product-image {
-        transform: scale(1.1); /* Mayor efecto de zoom al hacer hover */
-    }
-    
-    </style>
+</style>
 
-
-
-
-   <section class="product-container">
-    <div class="product-card" onclick="window.location.href='lin1.html'">
+<section class="product-container">
+    <div class="product-card" onclick="window.location.href='v1.html'">
         <div class="product-image" style="background-image: url('imagen/li1.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler Freezer </h3>
@@ -327,15 +316,7 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin2.html'">
+    <div class="product-card" onclick="window.location.href='v2.html'">
         <div class="product-image" style="background-image: url('imagen/li2.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name">VENTUS Visicooler Freezer </h3>
@@ -343,13 +324,7 @@
         </div>
     </div>
 
-
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin3.html'">
+    <div class="product-card" onclick="window.location.href='v3.html'">
         <div class="product-image" style="background-image: url('imagen/li3.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler</h3>
@@ -357,13 +332,7 @@
         </div>
     </div>
 
-
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin4.html'">
+    <div class="product-card" onclick="window.location.href='v4.html'">
         <div class="product-image" style="background-image: url('imagen/li4.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler Premium</h3>
@@ -371,27 +340,15 @@
         </div>
     </div>
 
-    
-
-
-
-
-    <div class="product-card" onclick="window.location.href='lin5.html'">
+    <div class="product-card" onclick="window.location.href='v5.html'">
         <div class="product-image" style="background-image: url('imagen/li5.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler Turbo Cooling</h3>
-            <p class="product-description"> LG-320TC, 320 Lts</p>
+            <p class="product-description">LG-320TC, 320 Lts</p>
         </div>
     </div>
 
-
-
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin6.html'">
+    <div class="product-card" onclick="window.location.href='v6.html'">
         <div class="product-image" style="background-image: url('imagen/li6.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler Subzero</h3>
@@ -399,350 +356,32 @@
         </div>
     </div>
 
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin7.html'">
+    <div class="product-card" onclick="window.location.href='v7.html'">
         <div class="product-image" style="background-image: url('imagen/li7.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler</h3>
-            <p class="product-description"> VC VC-370L, 370Lts .</p>
+            <p class="product-description">VC VC-370L, 370Lts</p>
         </div>
     </div>
 
-
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin8.html'">
+    <div class="product-card" onclick="window.location.href='v8.html'">
         <div class="product-image" style="background-image: url('imagen/li8.jpg');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler Turbo Cooling</h3>
-            <p class="product-description">LG-380TC, 380 Lts .</p>
+            <p class="product-description">LG-380TC, 380 Lts</p>
         </div>
     </div>
 
-
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin9.html'">
+    <div class="product-card" onclick="window.location.href='v9.html'">
         <div class="product-image" style="background-image: url('imagen/li9.png');"></div>
         <div class="product-info">
             <h3 class="product-name"> Visicooler Premium VCTM</h3>
-            <p class="product-description">1400L, 1400 Lts.</p>
+            <p class="product-description">1400L, 1400 Lts</p>
         </div>
     </div>
 
-
-
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin10.html'">
-        <div class="product-image" style="background-image: url('imagen/li10.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name"> Visicooler LG-220LED</h3>
-            <p class="product-description">220 ltrs.</p>
-        </div>
-    </div>
-
-
-
-
-    
-    <div class="product-card" onclick="window.location.href='lin11.html'">
-        <div class="product-image" style="background-image: url('imagen/li11.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name"> Visicooler VC</h3>
-            <p class="product-description">VC-370W, 370 Lts</p>
-        </div>
-    </div>
-    
-
-
-
-
-    <div class="product-card" onclick="window.location.href='lin12.html'">
-        <div class="product-image" style="background-image: url('imagen/li12.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">     Visicooler Subzero    </h3>
-            <p class="product-description">     VCSZ-530L, 530 Lts  </p>
-        </div> 
-    </div>
-
-
-
-
-
-    <div class="product-card" onclick="window.location.href='lin13.html'">
-        <div class="product-image" style="background-image: url('imagen/li13.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">    Visicooler     </h3>
-            <p class="product-description">     VC VC-540L, 540 Lts   </p>
-        </div> 
-    </div>
-
-
-
-
-    <div class="product-card" onclick="window.location.href='lin14.html'">
-        <div class="product-image" style="background-image: url('imagen/li14.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">   Visicooler Premium      </h3>
-            <p class="product-description">   VCTM-1900L, 1900 Lts    </p>
-        </div> 
-    </div>
-
-
-
-
-    <div class="product-card" onclick="window.location.href='lin15.html'">
-        <div class="product-image" style="background-image: url('imagen/li15.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">      Visicooler Turbo Colling   </h3>
-            <p class="product-description">     LG-440TC, 440 Lts  </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin16.html'">
-        <div class="product-image" style="background-image: url('imagen/li16.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">    Visicooler LG-290 LED     </h3>
-            <p class="product-description">   290 lts    </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin17.html'">
-        <div class="product-image" style="background-image: url('imagen/li17.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">    VisicoolerLG-360LED,     </h3>
-            <p class="product-description">     360 Lts  </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin18.html'">
-        <div class="product-image" style="background-image: url('imagen/li18.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">   Visicooler Turbo     </h3>
-            <p class="product-description">     Cooling LG-510TC, 510 Lts  </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin19.html'">
-        <div class="product-image" style="background-image: url('imagen/li19.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">  Visicooler Premium       </h3>
-            <p class="product-description">    VCBM-600L, 600 Lts   </p>
-        </div> 
-    </div>
-
-
-
-
-    <div class="product-card" onclick="window.location.href='lin20.html'">
-        <div class="product-image" style="background-image: url('imagen/li20.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">    Visicooler VC VC-600L     </h3>
-            <p class="product-description">    600 lts   </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin21.html'">
-        <div class="product-image" style="background-image: url('imagen/li21.png');"></div>
-        <div class="product-info">
-            <h3 class="product-name">     Visicooler LG-    </h3>
-            <p class="product-description">   360BLACK, 360 Lts    </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin22.html'">
-        <div class="product-image" style="background-image: url('imagen/li22.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">  Visicooler Turbo Cooling       </h3>
-            <p class="product-description"> LG-550TC, 55O Lts      </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin23.html'">
-        <div class="product-image" style="background-image: url('imagen/li23.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">   Visicooler VC VC-800L,      </h3>
-            <p class="product-description">   800 Lts,    </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin24.html'">
-        <div class="product-image" style="background-image: url('imagen/li24.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">     Visicooler Freezer Premium     </h3>
-            <p class="product-description">   VCFBM-500L, 500 Lts    </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin25.html'">
-        <div class="product-image" style="background-image: url('imagen/li25.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">       Visicooler VC VC-  </h3>
-            <p class="product-description">    1000LS, 1000 Lts   </p>
-        </div> 
-    </div>
-
-
-
-    
-    
-
-
-    <div class="product-card" onclick="window.location.href='lin26.html'">
-        <div class="product-image" style="background-image: url('imagen/li26.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">       Visicooler Turbo Cooling   </h3>
-            <p class="product-description">  LG-900TC, 900Lts     </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin27.html'">
-        <div class="product-image" style="background-image: url('imagen/li27.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">      Visicooler Premium VCBM   </h3>
-            <p class="product-description">    -1000L, 1000 Lts   </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin28.html'">
-        <div class="product-image" style="background-image: url('imagen/li28.png');"></div>
-        <div class="product-info">
-            <h3 class="product-name">  Visicooler VC VC-       </h3>
-            <p class="product-description">   1200L, 1200 Lts    </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin29.html'">
-        <div class="product-image" style="background-image: url('imagen/li29.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">      Visicooler Turbo   </h3>
-            <p class="product-description">     Cooling LG-750TCG, 750 Lts  </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin30.html'">
-        <div class="product-image" style="background-image: url('imagen/li30.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">      Visicooler Freezer   </h3>
-            <p class="product-description">    Premium VCFBM-900L, 900 Lts   </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin31.html'">
-        <div class="product-image" style="background-image: url('imagen/li31.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">     Visicooler Turbo    </h3>
-            <p class="product-description">     Cooling LG-380TCG, 380 Lts  </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin32.html'">
-        <div class="product-image" style="background-image: url('imagen/li32.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">     Visicooler Premium    </h3>
-            <p class="product-description">     VCBM-1500L, 1500 Lts  </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin33.html'">
-        <div class="product-image" style="background-image: url('imagen/li33.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">     Visicooler Freezer Premium VCFBM    </h3>
-            <p class="product-description">  1400L, 1400 Lts     </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin34.html'">
-        <div class="product-image" style="background-image: url('imagen/li34.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">    Visicooler Freezer Premium    </h3>
-            <p class="product-description">    VCFTM-800L   </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin35.html'">
-        <div class="product-image" style="background-image: url('imagen/li35.png');"></div>
-        <div class="product-info">
-            <h3 class="product-name">   Visicooler Freezer Premium     </h3>
-            <p class="product-description">  VCFTM-1300L     </p>
-        </div> 
-    </div>
-
-
-
-    <div class="product-card" onclick="window.location.href='lin36.html'">
-        <div class="product-image" style="background-image: url('imagen/li36.jpg');"></div>
-        <div class="product-info">
-            <h3 class="product-name">  Visicooler Freezer Premium      </h3>
-            <p class="product-description">   VCFTM-1800L    </p>
-        </div> 
-    </div>
-    
-
-
-
-
-    
     <!-- Continúa agregando más productos como estos -->
 </section>
-
-
-
-
-
-
-
-
 
 
 

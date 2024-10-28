@@ -451,6 +451,185 @@
 
 
 
+<style>
+  /* Contenedor principal de productos */
+  .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Configura columnas adaptables */
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+  }
+
+  /* Estilos para cada tarjeta */
+  .product-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  /* Efecto hover para cada tarjeta */
+  .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Imagen de producto */
+  .product-image {
+      width: 100%;
+      height: 200px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.5s ease;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  }
+
+  /* Aumenta el tamaño de la imagen en hover */
+  .product-card:hover .product-image {
+      transform: scale(1.05);
+  }
+
+  /* Información del producto */
+  .product-info {
+      padding: 15px;
+  }
+
+  /* Nombre del producto */
+  .product-name {
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+  }
+
+  /* Descripción del producto */
+  .product-description {
+      font-size: 0.9rem;
+      color: #555;
+      opacity: 0.8;
+  }
+
+  /* Borde inferior dorado en cada tarjeta */
+  .product-card::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: #b48800;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+</style>
+
+<section class="product-container">
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2434/01J5XHF3PRNJ7GCWYGCCHZDDWJ.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/361/VR1PS-700.png');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Refrigerador Acerado</h3>
+          <p class="product-description">VR1PS-700, 610 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2428/01J5XG8HZJP6N4QQSTAYGC3F40.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/389/VF1PS-700_03.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Freezer Acerado</h3>
+          <p class="product-description">VF1PS-700, 610 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2429/01J5XGDAGHY5Z5P0Q2P2B92TZQ.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/870/VF1PS-700V.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Freezer Acero</h3>
+          <p class="product-description">VF1PS-700V, 610 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2435/01J5XHFQ6AJ9MME471QF914MBA.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/902/VR1PS-700V.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Refrigerador Acero</h3>
+          <p class="product-description">VR1PS-700V, 610 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2430/01J5XGWH5RABBEZPZ2MXDM74HM.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/371/VF2PS-1400.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Freezer Acerado</h3>
+          <p class="product-description">VF2PS-1400, 1335 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2438/01J5XHKSSXAYN5F3S8DYN7BSDW.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/888/VR2PS-1400.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Refrigerador 2ptas Acero Inox.</h3>
+          <p class="product-description">VR2PS-1400, 1335 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2431/01J5XGYRV562DRE8HKGMFT119R.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/853/VF2PS-1400V.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Freezer Acerado</h3>
+          <p class="product-description">VF2PS-1400V, 1335 Litros</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2437/01J5XHJXXRGJP22PM6SWENVPQG.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/880/VR2PS-1400V_2.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Refrigerador Acerado</h3>
+          <p class="product-description">VR2PS-1400V, 1335 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2436/01J5XHH46H9R5EM98Q234K0FED.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/351/VR2PS-600.png');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Refrigerador Acerado</h3>
+          <p class="product-description">VR2PS-600, 410 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2433/01J5XH3ATY4CDQB6CMT6HQKC94.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/380/VF2PS-600.png');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Freezer Acerado</h3>
+          <p class="product-description">VF2PS-600, 410 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2441/01J5XHVDCM9CA1G0Y1AHJGT9Z3.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/864/VF4PS-1000.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Freezer Acerado</h3>
+          <p class="product-description">VF4PS-1000, 900 Lts</p>
+      </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='https://ventus-media.s3.amazonaws.com/2439/01J5XHP9WV6MWMQT60YVXQ6QFY.pdf'">
+      <div class="product-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/899/VR4PS-1000.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name">Refrigerador Acerado</h3>
+          <p class="product-description">VR4PS-1000, 900 Lts</p>
+      </div>
+  </div>
+</section>
 
 
 

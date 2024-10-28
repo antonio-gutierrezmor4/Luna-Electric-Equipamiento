@@ -228,248 +228,175 @@
 
 
 
+<section class="catalog-container">
+  <div class="catalog-card" onclick="window.location.href='v.html'">
+      <div class="card-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/2384/01J5EK3GQ5XPP9D8GCG01PFZ0T.jpg');"></div>
+      <div class="card-title">Visicoolers</div>
+  </div>
 
-<style>
-    
+  <div class="catalog-card" onclick="window.location.href='m.html'">
+      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/MHA-20_1_360x.jpg?v=1729635775');"></div>
+      <div class="card-title">Maquinas de helado</div>
+  </div>
 
+  <div class="catalog-card" onclick="window.location.href='p.html'">
+      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/products/AMA-15M-1_360x.jpg?v=1673472480');"></div>
+      <div class="card-title">Panaderia y pasteleria</div>
+  </div>
 
-    /* Estilos generales para el contenedor */
-    .catalog-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        padding: 50px 20px;
-        background-color: #f2f2f2; /* Fondo suave y elegante */
-    }
-    
-    /* Estilos para cada tarjeta */
-    .catalog-card {
-        width: 250px; /* Tamaño más grande para las tarjetas */
-        background-color: #ffffff;
-        border-radius: 15px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
-        overflow: hidden;
-        cursor: pointer;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #e0e0e0; /* Borde sutil */
-    }
-    
-    .catalog-card:hover {
-        transform: translateY(-10px); /* Mayor elevación al hacer hover */
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más profunda al hacer hover */
-    }
-    
-    /* Estilo de la imagen */
-    .card-image {
-        width: 100%;
-        height: 200px; /* Tamaño ampliado de la imagen */
-        background-size: cover;
-        background-position: center;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        transition: transform 0.5s ease;
-    }
-    
-    .catalog-card:hover .card-image {
-        transform: scale(1.08); /* Mayor ampliación al hacer hover */
-    }
-    
-    /* Título de la tarjeta */
-    .card-title {
-        font-family: 'Georgia', serif;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: #2c3e50; /* Azul oscuro elegante */
-        padding: 20px;
-        background-color: #fdfdfd; /* Fondo claro */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        transition: color 0.3s ease;
-    }
-    
-    .catalog-card:hover .card-title {
-        color: #b48800; /* Color dorado al hacer hover */
-    }
-    
-    /* Agregar borde inferior dorado */
-    .catalog-card::after {
-        content: '';
-        display: block;
-        height: 5px;
-        background-color: #b48800; /* Borde inferior en color dorado */
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-    
-    /* Efecto de transición en las imágenes */
-    .card-image {
-        transition: transform 0.5s ease;
-    }
-    
-    .catalog-card:hover .card-image {
-        transform: scale(1.1); /* Mayor efecto de zoom al hacer hover */
-    }
-    
-    
-        </style>
-     
-    
-    
-      <section class="catalog-container">
-        <div class="catalog-card" onclick="window.location.href='v.html'">
-            <div class="card-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/2384/01J5EK3GQ5XPP9D8GCG01PFZ0T.jpg');"></div>
-            <div class="card-title">Visicoolers</div>
-        </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <div class="catalog-card" onclick="window.location.href='m.html'">
-            <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/MHA-20_1_360x.jpg?v=1729635775');"></div>
-            <div class="card-title">Maquinas de helado</div>
-        </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <div class="catalog-card" onclick="window.location.href='p.html'">
-            <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/products/AMA-15M-1_360x.jpg?v=1673472480');"></div>
-            <div class="card-title">Panaderia y pasteleria</div>
-        </div>
-    
-    
-    
-    
-    
-    
-        <div class="catalog-card" onclick="window.location.href='n.html'">
-            <div class="card-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/1136/VENTUS-BLOG-2022-06-02.png');"></div>
-            <div class="card-title">Vitrinas Mantenedoras</div>
-        </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        <div class="catalog-card" onclick="window.location.href='r.html'">
-            <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/AF-11004FC_3_320x.jpg?v=1727966548');"></div>
-            <div class="card-title">Refrigerador/freezer</div>
-        </div>
-    
-    
-    
-    
-    
-    
-        <div class="catalog-card" onclick="window.location.href='e.html'">
-          <div class="card-image" style="background-image: url('https://promart.vteximg.com.br/arquivos/ids/8032812-1000-1000/145627.jpg?v=638550366725000000');"></div>
-          <div class="card-title">Congeladoras y exhibidoras para helados</div>
-      </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      <div class="catalog-card" onclick="window.location.href='c.html'">
-        <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/CM-02_3_360x.jpg?v=1729613475');"></div>
-        <div class="card-title">Creperas y wafles</div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="catalog-card" onclick="window.location.href='vi.html'">
+  <div class="catalog-card" onclick="window.location.href='n.html'">
+      <div class="card-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/1136/VENTUS-BLOG-2022-06-02.png');"></div>
+      <div class="card-title">Vitrinas Mantenedoras</div>
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='r.html'">
+      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/AF-11004FC_3_320x.jpg?v=1727966548');"></div>
+      <div class="card-title">Refrigerador/freezer</div>
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='e.html'">
+      <div class="card-image" style="background-image: url('https://promart.vteximg.com.br/arquivos/ids/8032812-1000-1000/145627.jpg?v=638550366725000000');"></div>
+      <div class="card-title">Congeladoras y exhibidoras para helados</div>
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='c.html'">
+      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/CM-02_3_360x.jpg?v=1729613475');"></div>
+      <div class="card-title">Creperas y wafles</div>
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='vi.html'">
       <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/VCM-120_12d4f641-764c-4cee-966f-e959f73e8d4a_360x.jpg?v=1697054883');"></div>
       <div class="card-title">Vitrinas calientes</div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="catalog-card" onclick="window.location.href='sell.html'">
-      <div class="card-image" style="background-image: url(https://ilumiperu.com/cdn/shop/files/VM-500T-31_1296x.png?v=1720564040);"></div>
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='sell.html'">
+      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/VM-500T-31_1296x.png?v=1720564040');"></div>
       <div class="card-title">Selladoras y balanzas</div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    <div class="catalog-card" onclick="window.location.href='ho.html'">
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='ho.html'">
       <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/products/HC-10000-1_320x.jpg?v=1673544230');"></div>
       <div class="card-title">Hornos y panaderia</div>
-    </div>
-    
-    
-    
-    
-    
-    <div class="catalog-card" onclick="window.location.href='ma.html'">
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='ma.html'">
       <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/MH-150_3_540x.jpg?v=1727968186');"></div>
       <div class="card-title">Maquinas de hielo</div>
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="catalog-card" onclick="window.location.href='lin.html'">
+  </div>
+
+  <div class="catalog-card" onclick="window.location.href='lin.html'">
       <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/FRICANOX0671_320x.jpg?v=1725980281');"></div>
       <div class="card-title">Linea domestica</div>
-    </div>
-    
-    
-        <!-- Continúa agregando más tarjetas como las anteriores con los nombres y enlaces correspondientes -->
-    
-    </section>
-    
-    
-    
-    
-    
-    
+  </div>
+</section>
+
+<style>
+  /* Estilos para el contenedor del catálogo */
+  .catalog-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 10px;
+      background-color: #f9f9f9;
+  }
+  
+  /* Estilos para cada tarjeta */
+  .catalog-card {
+      width: 100%;
+      max-width: 270px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      border: 1px solid #e0e0e0;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  /* Efecto Hover */
+  .catalog-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .catalog-card:hover .card-image {
+      transform: scale(1.05);
+  }
+  
+  /* Imagen de la tarjeta */
+  .card-image {
+      width: 100%;
+      height: 220px;
+      background-size: contain; /* Muestra la imagen completa sin recortarla */
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.5s ease;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  }
+
+  /* Efecto "overlay" en la imagen */
+  .catalog-card:hover .card-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  }
+
+  /* Título de la tarjeta */
+  .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #2c3e50;
+      padding: 15px 10px;
+      background-color: #fdfdfd;
+      transition: color 0.3s ease;
+  }
+  
+  .catalog-card:hover .card-title {
+      color: #b48800;
+  }
+
+  /* Borde inferior dorado */
+  .catalog-card::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: #b48800;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+
+  /* Media queries para dispositivos móviles */
+  @media (max-width: 768px) {
+      .catalog-container {
+          gap: 15px;
+      }
+      .catalog-card {
+          max-width: 48%;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .catalog-card {
+          max-width: 100%;
+      }
+  }
+</style>
+
+
     
     
     

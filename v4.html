@@ -1,4 +1,4 @@
-<!--       vitrinas calientes -->
+<!--    principal    -->
 
 
 
@@ -169,6 +169,19 @@
 
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+    
+
     <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
         <div class="menu-top">
             <h2 class="menu-title">Menu</h2>
@@ -217,118 +230,313 @@
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <style>
+        /* CSS completo con nombres aleatorios */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body {
+            line-height: 1.5;
+        }
+        .box-random {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .img-container {
+            overflow: hidden;
+        }
+        .img-rotation {
+            display: flex;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+        .img-rotation img {
+            min-width: 100%;
+        }
+        .img-options {
+            display: flex;
+        }
+        .img-box {
+            margin: 0.3rem;
+        }
+        .img-box:nth-child(1),
+        .img-box:nth-child(2),
+        .img-box:nth-child(3) {
+            margin-right: 0;
+        }
+        .img-box:hover {
+            opacity: 0.8;
+        }
+        .item-info {
+            padding: 2rem 1rem;
+        }
+        .title-product {
+            font-size: 3rem;
+            text-transform: capitalize;
+            font-weight: 700;
+            position: relative;
+            color: #12263a;
+            margin: 1rem 0;
+        }
+        .title-product::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 80px;
+            background: #12263a;
+        }
+        .link-shop {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            background: #256eff;
+            color: #fff;
+            padding: 0 0.3rem;
+            transition: all 0.5s ease;
+        }
+        .link-shop:hover {
+            opacity: 0.9;
+        }
+        .rating-box {
+            color: #ffc107;
+        }
+        .rating-box span {
+            font-weight: 600;
+            color: #252525;
+        }
+        .price-section {
+            margin: 1rem 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .price-section span {
+            font-weight: 400;
+        }
+        .old-price span {
+            color: #f64749;
+            text-decoration: line-through;
+        }
+        .current-price span {
+            color: #256eff;
+        }
+        .item-details h2 {
+            text-transform: capitalize;
+            color: #12263a;
+            padding-bottom: 0.6rem;
+        }
+        .item-details p {
+            font-size: 0.9rem;
+            padding: 0.3rem;
+            opacity: 0.8;
+        }
+        .item-details ul {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        .item-details ul li {
+            margin: 0;
+            list-style: none;
+            background: url(shoes_images/checked.png) left center no-repeat;
+            background-size: 18px;
+            padding-left: 1.7rem;
+            margin: 0.4rem 0;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        .item-details ul li span {
+            font-weight: 400;
+        }
+        .purchase-options {
+            margin: 1.5rem 0;
+        }
+        .purchase-options input,
+        .purchase-options .button-buy {
+            border: 1.5px solid #ddd;
+            border-radius: 25px;
+            text-align: center;
+            padding: 0.45rem 0.8rem;
+            outline: 0;
+            margin-right: 0.2rem;
+            margin-bottom: 1rem;
+        }
+        .purchase-options input {
+            width: 60px;
+        }
+        .purchase-options .button-buy {
+            cursor: pointer;
+            color: #fff;
+        }
+        .purchase-options .button-buy:first-of-type {
+            background: #256eff;
+        }
+        .purchase-options .button-buy:last-of-type {
+            background: #f64749;
+        }
+        .purchase-options .button-buy:hover {
+            opacity: 0.9;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            color: #000;
+            border: 1px solid #000;
+            margin: 0 0.2rem;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.5s ease;
+        }
+        .social-icons a:hover {
+            background: #000;
+            border-color: transparent;
+            color: #fff;
+        }
+
+        @media screen and (min-width: 992px) {
+            .card-layout {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1.5rem;
+            }
+            .box-random {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .image-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .item-info {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="box-random">
+    <div class="card-layout">
+        <!-- Sección de imágenes del producto -->
+        <div class="image-section">
+            <div class="img-container">
+                <div class="img-rotation">
+                    <img src="        https://ventus-media.s3.amazonaws.com/2353/01J49X74Z0DTQC3XX89GE2APJZ.jpg        " alt="imagen del producto">
+                    <img src="      https://ventus-media.s3.amazonaws.com/2354/01J49X757ZM2TFWDYPW2KMNQEX.jpg          " alt="imagen del producto">
+                    <img src="     https://ventus-media.s3.amazonaws.com/2355/01J49X75H3ABR5W3986KWJER0E.jpg           " alt="imagen del producto">
+                    <img src="      https://ventus-media.s3.amazonaws.com/2357/01J49X762HTJS5ZMFYKQ491C6H.jpg          " alt="imagen del producto">
+                </div>
+            </div>
+            <div class="img-options">
+                <div class="img-box">
+                    <a href="#" data-id="1">
+                        <img src="       https://ventus-media.s3.amazonaws.com/2353/01J49X74Z0DTQC3XX89GE2APJZ.jpg           " alt="imagen del producto">
+                    </a>
+                </div>
+                <div class="img-box">
+                    <a href="#" data-id="2">
+                        <img src="       https://ventus-media.s3.amazonaws.com/2354/01J49X757ZM2TFWDYPW2KMNQEX.jpg            " alt="imagen del producto">
+                    </a>
+                </div>
+                <div class="img-box">
+                    <a href="#" data-id="3">
+                        <img src="     https://ventus-media.s3.amazonaws.com/2355/01J49X75H3ABR5W3986KWJER0E.jpg                " alt="imagen del producto">
+                    </a>
+                </div>
+                <div class="img-box">
+                    <a href="#" data-id="4">
+                        <img src="            https://ventus-media.s3.amazonaws.com/2357/01J49X762HTJS5ZMFYKQ491C6H.jpg          " alt="imagen del producto">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Información del producto -->
+        <div class="item-info">
+            <h2 class="title-product">Visicooler Premium VCTM-900L</h2>
+            <a href="index.html" class="link-shop">Visita nuestra Tienda</a>
+            <div class="rating-box">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>4.7</span>
+            </div>
+
+            <div class="price-section">
+                <p class="old-price"> <span></span></p>
+                <p class="current-price"><span></span></p>
+            </div>
+
+            <div class="item-details">
+                <h2>900 lts</h2>
+                <p>Sistema de enfriamiento por frío forzado.
+                    Estructura sólida con excelentes terminaciones y marco de aluminio.
+                    Repisas regulables.
+                    2 puertas abatibles.
+                    Puertas abatibles de doble vidrio de 4mm de espesor.
+                    Compresor Donper 1/2 HP.
+                    Con controlador digital de temperatura.
+                    Luz LED en interior y en cenefa iluminada.
+                    Temperatura de trabajo: 0oC a 10oC.
+                    Fácil limpieza y mantención.
+                    Base con ruedas para fácil desplazamiento.</p>
+                <ul>
+                    
+                </ul>
+            </div>
+
+            <div class="purchase-options">
+                
+                   <a href="https://api.whatsapp.com/send?phone=51979989093&amp"> <button type="button" class="button-buy">
+                    <i class="fab fa-whatsapp"></i>
+                </button></a>
+                   <a href="tel:+51979989093"> <button type="button" class="button-buy">LLámenos</button></a>
+            </div>
+
+            <div class="social-icons">
+                <p>Visítanos  : </p>
+                <a href="https://www.facebook.com/industriaslunaelectric/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/lunaelectric_peru/"><i class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=51979989093&amp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.youtube.com/channel/UCcW-gnCI6RUeFv3b7kSuYBg/videos"><i class="fab fa-youtube"></i></a>
+            </div>
 
 
-
-
-
-
-
-
-<style>
-  /* Contenedor principal de productos */
-  .product-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Configura columnas adaptables */
-      gap: 20px;
-      justify-content: center;
-      padding: 30px 10px;
-      max-width: 1200px;
-      margin: 0 auto;
-      background-color: #f2f2f2;
-  }
-
-  /* Estilos para cada tarjeta */
-  .product-card {
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra suave */
-      overflow: hidden;
-      cursor: pointer;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-  }
-
-  /* Efecto hover para cada tarjeta */
-  .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Imagen de producto */
-  .product-image {
-      width: 100%;
-      height: 200px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.5s ease;
-  }
-
-  /* Aumenta el tamaño de la imagen en hover */
-  .product-card:hover .product-image {
-      transform: scale(1.1);
-  }
-
-  /* Información del producto */
-  .product-info {
-      padding: 15px;
-  }
-
-  /* Nombre del producto */
-  .product-name {
-      font-family: 'Georgia', serif;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #2c3e50;
-      margin-bottom: 5px;
-  }
-
-  /* Descripción del producto */
-  .product-description {
-      font-size: 0.9rem;
-      color: #555;
-      opacity: 0.8;
-  }
-
-  /* Borde inferior dorado en cada tarjeta */
-  .product-card::after {
-      content: '';
-      display: block;
-      height: 4px;
-      background-color: #b48800;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-  }
-</style>
-
-<section class="product-container">
-  <div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VCM-120.jpg'">  
-      <div class="product-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/VCM-120_12d4f641-764c-4cee-966f-e959f73e8d4a_360x.jpg?v=1697054883');"></div> 
-      <div class="product-info">
-          <h3 class="product-name">Vitrina caliente grande de 4 bandejas</h3> 
-          <p class="product-description">VCM-120</p> 
-      </div>
-  </div>
-
-  <div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VCM-96.jpg'">  
-      <div class="product-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/VCM-96_e17ce67d-9e98-4db9-8168-a520e672cde0_360x.jpg?v=1697054900');"></div> 
-      <div class="product-info">
-          <h3 class="product-name">Vitrina caliente mediana de 3 bandejas</h3> 
-          <p class="product-description">VCM-96</p> 
-      </div>
-  </div>
-
-  <div class="product-card" onclick="window.location.href='https://ilumiperu.com/cdn/shop/files/Ficha_Tecnica_VCM-66.jpg'">  
-      <div class="product-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/VCM-66_a6dd0c9c-66a0-4db1-9b8f-4186fca21b06_360x.jpg?v=1697054909');"></div> 
-      <div class="product-info">
-          <h3 class="product-name">Vitrina caliente pequeña de 2 bandejas</h3> 
-          <p class="product-description">VMC-66</p> 
-      </div>
-  </div>
+            <script src="scriptaa.js"></script>
+        </div>
+    </div>
 </section>
 
 
@@ -352,7 +560,34 @@
 
 
 
-<!--     pie de pagina   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 <footer>
     
@@ -551,3 +786,7 @@
   </body>
   
 </html><!--
+
+<script src="scriptaa.js"></script>
+</body>
+</html>
