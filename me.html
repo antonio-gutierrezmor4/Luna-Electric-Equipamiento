@@ -227,10 +227,194 @@
 
 
 
+<style>
+  /* Contenedor principal de productos */
+  .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      justify-content: center;
+      padding: 30px 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #f2f2f2;
+  }
+
+  /* Estilos para cada tarjeta */
+  .product-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  /* Efecto hover para cada tarjeta */
+  .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Imagen de producto */
+  .product-image {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+  }
+
+  /* Aumenta el tamaño de la imagen en hover */
+  .product-card:hover .product-image {
+      transform: scale(1.05);
+  }
+
+  /* Información del producto */
+  .product-info {
+      padding: 15px;
+  }
+
+  /* Nombre del producto */
+  .product-name {
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+  }
+
+  /* Descripción del producto */
+  .product-description {
+      font-size: 0.9rem;
+      color: #555;
+      opacity: 0.8;
+  }
+
+  /* Borde inferior dorado en cada tarjeta */
+  .product-card::after {
+      content: '';
+      display: block;
+      height: 4px;
+      background-color: #b48800;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+  }
+</style>
+
+<section class="product-container">
+  <div class="product-card" onclick="window.location.href='me1.html'">
+      <div class="product-image" style="background-image: url('imagen/mes1.jpg');"></div>
+      <div class="product-info">
+          <h3 class="product-name"> Mesa Ensaladera Acerada VMRSL-370, 300 Lts
+          </h3>
+          <p class="product-description"></p>
+      </div>
+  </div>
+
+
+
+  <div class="product-card" onclick="window.location.href='me2.html'">
+    <div class="product-image" style="background-image: url('imagen/mes2.jpg        ');"></div>
+    <div class="product-info">
+        <h3 class="product-name">  Mesa Refrigerada Aceradas VMR2PS-260, 600 Lts
+      
+        </h3>
+        <p class="product-description"></p>
+    </div>
+</div>
+
+
+
+<div class="product-card" onclick="window.location.href='me3.html'">
+  <div class="product-image" style="background-image: url('imagen/mes3.jpg           ');"></div>
+  <div class="product-info">
+      <h3 class="product-name">   Mesa Ensaladera Acerada VMRSL-375, 380 Lts
+     
+      </h3>
+      <p class="product-description"></p>
+  </div>
+</div>
 
 
 
 
+<div class="product-card" onclick="window.location.href='me4.html'">
+  <div class="product-image" style="background-image: url('imagen/mes4.jpg          ');"></div>
+  <div class="product-info">
+      <h3 class="product-name">   Mesa Refrigerada Acerada VMR2PS-280V, 280 Lts
+     
+      </h3>
+      <p class="product-description"></p>
+  </div>
+</div>
+
+
+
+
+
+<div class="product-card" onclick="window.location.href='me5.html'">
+  <div class="product-image" style="background-image: url('imagen/mes5.jpg           ');"></div>
+  <div class="product-info">
+      <h3 class="product-name">     Mesa Ensaladera Acerada VMRSL-380, 380 Lts
+   
+      </h3>
+      <p class="product-description"></p>
+  </div>
+</div>
+
+
+
+
+<div class="product-card" onclick="window.location.href='me6.html'">
+  <div class="product-image" style="background-image: url('imagen/mes6.jpg           ');"></div>
+  <div class="product-info">
+      <h3 class="product-name">        Mesa Refrigerada Acerada VMR3PS-480, 380 Lts
+
+      </h3>
+      <p class="product-description"></p>
+  </div>
+</div>
+
+
+
+
+<div class="product-card" onclick="window.location.href='me7.html'">
+  <div class="product-image" style="background-image: url('imagen/mes7.png           ');"></div>
+  <div class="product-info">
+      <h3 class="product-name">  Mesa Ensaladera Acerada VMRSL-385, 380 Lts
+      
+      </h3>
+      <p class="product-description"></p>
+  </div>
+</div>
+
+
+
+
+<div class="product-card" onclick="window.location.href='me8.html'">
+  <div class="product-image" style="background-image: url('imagen/mes8.jpg           ');"></div>
+  <div class="product-info">
+      <h3 class="product-name">    Mesa Refrigerada Acerada VMR3PS-420V, 450 Lts
+    
+      </h3>
+      <p class="product-description"></p>
+  </div>
+</div>
+
+
+
+
+
+
+
+</section>
 
 
 
