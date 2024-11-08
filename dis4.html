@@ -1,4 +1,4 @@
-<!--     catalogo   -->
+<!--    principal    -->
 
 
 
@@ -169,6 +169,19 @@
 
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+    
+
     <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
         <div class="menu-top">
             <h2 class="menu-title">Menu</h2>
@@ -217,225 +230,329 @@
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <style> /* Espacio debajo del Header */
+        header {
+            margin-bottom: 150px; /* Ajusta el valor según tus necesidades */
+        }
+        
+        /* Espacio encima y debajo de la Section */
+        section.box-random {
+            margin-top: 50px; /* Espacio entre Header y Section */
+            margin-bottom: 50px; /* Espacio entre Section y Footer */
+        }
+        
+        /* Espacio encima del Footer */
+        footer {
+            margin-top: 170px; /* Ajusta el valor según tus necesidades */
+        }
+        /* CSS completo con nombres aleatorios */
+        
+        /* CSS completo con nombres aleatorios */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        body {
+            line-height: 1.5;
+        }
+        .box-random {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        .img-container {
+            overflow: hidden;
+        }
+        .img-rotation {
+            display: flex;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+        .img-rotation img {
+            min-width: 100%;
+        }
+        .img-options {
+            display: flex;
+        }
+        .img-box {
+            margin: 0.3rem;
+        }
+        .img-box:nth-child(1),
+        .img-box:nth-child(2),
+        .img-box:nth-child(3) {
+            margin-right: 0;
+        }
+        .img-box:hover {
+            opacity: 0.8;
+        }
+        .item-info {
+            padding: 2rem 1rem;
+        }
+        .title-product {
+            font-size: 3rem;
+            text-transform: capitalize;
+            font-weight: 700;
+            position: relative;
+            color: #12263a;
+            margin: 1rem 0;
+        }
+        .title-product::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 80px;
+            background: #12263a;
+        }
+        .link-shop {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            background: #256eff;
+            color: #fff;
+            padding: 0 0.3rem;
+            transition: all 0.5s ease;
+        }
+        .link-shop:hover {
+            opacity: 0.9;
+        }
+        .rating-box {
+            color: #ffc107;
+        }
+        .rating-box span {
+            font-weight: 600;
+            color: #252525;
+        }
+        .price-section {
+            margin: 1rem 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .price-section span {
+            font-weight: 400;
+        }
+        .old-price span {
+            color: #f64749;
+            text-decoration: line-through;
+        }
+        .current-price span {
+            color: #256eff;
+        }
+        .item-details h2 {
+            text-transform: capitalize;
+            color: #12263a;
+            padding-bottom: 0.6rem;
+        }
+        .item-details p {
+            font-size: 0.9rem;
+            padding: 0.3rem;
+            opacity: 0.8;
+        }
+        .item-details ul {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        .item-details ul li {
+            margin: 0;
+            list-style: none;
+            background: url(shoes_images/checked.png) left center no-repeat;
+            background-size: 18px;
+            padding-left: 1.7rem;
+            margin: 0.4rem 0;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        .item-details ul li span {
+            font-weight: 400;
+        }
+        .purchase-options {
+            margin: 1.5rem 0;
+        }
+        .purchase-options input,
+        .purchase-options .button-buy {
+            border: 1.5px solid #ddd;
+            border-radius: 25px;
+            text-align: center;
+            padding: 0.45rem 0.8rem;
+            outline: 0;
+            margin-right: 0.2rem;
+            margin-bottom: 1rem;
+        }
+        .purchase-options input {
+            width: 60px;
+        }
+        .purchase-options .button-buy {
+            cursor: pointer;
+            color: #fff;
+        }
+        .purchase-options .button-buy:first-of-type {
+            background: #256eff;
+        }
+        .purchase-options .button-buy:last-of-type {
+            background: #f64749;
+        }
+        .purchase-options .button-buy:hover {
+            opacity: 0.9;
+        }
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            color: #000;
+            border: 1px solid #000;
+            margin: 0 0.2rem;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.5s ease;
+        }
+        .social-icons a:hover {
+            background: #000;
+            border-color: transparent;
+            color: #fff;
+        }
+
+        @media screen and (min-width: 992px) {
+            .card-layout {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1.5rem;
+            }
+            .box-random {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .image-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .item-info {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="box-random">
+    <div class="card-layout">
+        <!-- Sección de imágenes del producto -->
+        <div class="image-section">
+            <div class="img-container">
+                <div class="img-rotation">
+                    <img src="licua/dis41.png" alt="imagen del producto">
+                    <img src="licua/dis42.png" alt="imagen del producto">
+                    <img src="licua/dis43.png" alt="imagen del producto">
+                    <img src="licua/dis44.png" alt="imagen del producto">
+                </div>
+            </div>
+            <div class="img-options">
+                <div class="img-box">
+                    <a href="#" data-id="1">
+                        <img src="licua/dis41.png" alt="imagen del producto">
+                    </a>
+                </div>
+                <div class="img-box">
+                    <a href="#" data-id="2">
+                        <img src="licua/dis42.png" alt="imagen del producto">
+                    </a>
+                </div>
+                <div class="img-box">
+                    <a href="#" data-id="3">
+                        <img src="licua/dis43.png" alt="imagen del producto">
+                    </a>
+                </div>
+                <div class="img-box">
+                    <a href="#" data-id="4">
+                        <img src="licua/dis44.png" alt="imagen del producto">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Información del producto -->
+        <div class="item-info">
+            <h2 class="title-product"> Dispensadora de Jugos TR-102</h2>
+            <a href="index.html" class="link-shop">Visita nuestra Tienda</a>
+            <div class="rating-box">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>4.7</span>
+            </div>
+
+            <div class="price-section">
+                <p class="old-price"> <span></span></p>
+                <p class="current-price"><span></span></p>
+            </div>
+
+            <div class="item-details">
+                <h2> 50 Lts por tolva:</h2>
+                <p>2 tolvas de 50 litros c/una.
+                    Tolvas de acero inoxidable.
+                    Compresor EMBRACO 1/3 HP
+                    Paletas para mezclado de acero inoxidable 304.
+                    Temperatura de trabajo de 5°C a 8°C.
+                    Grifos con sistema push de policarbonato.
+                    Fácil limpieza y mantención.
+                    Una vez llegado a su estado de frío máximo, el equipo puede funcionar sin conexión a la corriente eléctrica y operar de manera independiente el servicio y mantener la bebida fresca por 5 horas aproximadamente.
+                    Rápido enfriamiento (100 litros/2 horas aprox.).</p>
+                <ul>
+                    
+                </ul>
+            </div>
+
+            <div class="purchase-options">
+                
+                   <a href="https://api.whatsapp.com/send?phone=51979989093&amp"> <button type="button" class="button-buy">
+                    <i class="fab fa-whatsapp"></i>
+                </button></a>
+                   <a href="tel:+51979989093"> <button type="button" class="button-buy">LLámenos</button></a>
+            </div>
+
+            <div class="social-icons">
+                <p>Visítanos  : </p>
+                <a href="https://www.facebook.com/industriaslunaelectric/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/lunaelectric_peru/"><i class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=51979989093&amp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.youtube.com/channel/UCcW-gnCI6RUeFv3b7kSuYBg/videos"><i class="fab fa-youtube"></i></a>
+            </div>
 
 
-
-
-
-
-
-
-
-
-
-<section class="catalog-container">
-  <div class="catalog-card" onclick="window.location.href='v.html'">
-      <div class="card-image" style="background-image: url('imagen/vicisi.jpg');"></div>
-      <div class="card-title">Visicoolers</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='m.html'">
-      <div class="card-image" style="background-image: url('imagen/hili.jpg');"></div>
-      <div class="card-title">Maquinas de helado</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='p.html'">
-      <div class="card-image" style="background-image: url('imagen/pani.png');"></div>
-      <div class="card-title">Panaderia y pasteleria</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='n.html'">
-      <div class="card-image" style="background-image: url('https://ventus-media.s3.amazonaws.com/1136/VENTUS-BLOG-2022-06-02.png');"></div>
-      <div class="card-title">Vitrinas Mantenedoras</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='r.html'">
-      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/AF-11004FC_3_320x.jpg?v=1727966548');"></div>
-      <div class="card-title">Refrigerador/freezer</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='e.html'">
-      <div class="card-image" style="background-image: url('https://promart.vteximg.com.br/arquivos/ids/8032812-1000-1000/145627.jpg?v=638550366725000000');"></div>
-      <div class="card-title">Congeladoras y exhibidoras para helados</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='c.html'">
-      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/CM-02_3_360x.jpg?v=1729613475');"></div>
-      <div class="card-title">Creperas y wafles</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='vi.html'">
-      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/VCM-120_12d4f641-764c-4cee-966f-e959f73e8d4a_360x.jpg?v=1697054883');"></div>
-      <div class="card-title">Vitrinas calientes</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='sell.html'">
-      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/VM-500T-31_1296x.png?v=1720564040');"></div>
-      <div class="card-title">Selladoras y balanzas</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='ho.html'">
-      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/products/HC-10000-1_320x.jpg?v=1673544230');"></div>
-      <div class="card-title">Hornos y panaderia</div>
-  </div>
-
-  <div class="catalog-card" onclick="window.location.href='dis.html'">
-    <div class="card-image" style="background-image: url('licua/dis.png');"></div>
-    <div class="card-title">Dispensadora de Bebidas</div>
-</div>
-
-
-
-
-
-
-
-<div class="catalog-card" onclick="window.location.href='me.html'">
-  <div class="card-image" style="background-image: url('licua/mess.jpg');"></div>
-  <div class="card-title">Mesas Refrigeradas</div>
-</div>
-
-
-
-
-
-
-
-
-  <div class="catalog-card" onclick="window.location.href='ma.html'">
-      <div class="card-image" style="background-image: url('https://ilumiperu.com/cdn/shop/files/MH-150_3_540x.jpg?v=1727968186');"></div>
-      <div class="card-title">Maquinas de hielo</div>
-  </div>
-  <div class="catalog-card" onclick="window.location.href='licuadora.html'">
-    <div class="card-image" style="background-image: url('licua/cu1.png');"></div>
-    <div class="card-title">licuadoras</div>
-</div>
-
-  
+            <script src="scriptaa.js"></script>
+        </div>
+    </div>
 </section>
 
-<style>
-  /* Estilos para el contenedor del catálogo */
-  .catalog-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 30px 10px;
-      background-color: #f9f9f9;
-  }
-  
-  /* Estilos para cada tarjeta */
-  .catalog-card {
-      width: 100%;
-      max-width: 270px;
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      cursor: pointer;
-      text-align: center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      position: relative;
-      border: 1px solid #e0e0e0;
-      height: 350px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-  }
-
-  /* Efecto Hover */
-  .catalog-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .catalog-card:hover .card-image {
-      transform: scale(1.05);
-  }
-  
-  /* Imagen de la tarjeta */
-  .card-image {
-      width: 100%;
-      height: 220px;
-      background-size: contain; /* Muestra la imagen completa sin recortarla */
-      background-repeat: no-repeat;
-      background-position: center;
-      transition: transform 0.5s ease;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-  }
-
-  /* Efecto "overlay" en la imagen */
-  .catalog-card:hover .card-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.2);
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-  }
-
-  /* Título de la tarjeta */
-  .card-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #2c3e50;
-      padding: 15px 10px;
-      background-color: #fdfdfd;
-      transition: color 0.3s ease;
-  }
-  
-  .catalog-card:hover .card-title {
-      color: #b48800;
-  }
-
-  /* Borde inferior dorado */
-  .catalog-card::after {
-      content: '';
-      display: block;
-      height: 4px;
-      background-color: #b48800;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-  }
-
-  /* Media queries para dispositivos móviles */
-  @media (max-width: 768px) {
-      .catalog-container {
-          gap: 15px;
-      }
-      .catalog-card {
-          max-width: 48%;
-      }
-  }
-  
-  @media (max-width: 480px) {
-      .catalog-card {
-          max-width: 100%;
-      }
-  }
-</style>
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
 
@@ -464,7 +581,27 @@
 
 
 
-<!--     pie de pagina   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 <footer>
     
@@ -663,3 +800,7 @@
   </body>
   
 </html><!--
+
+<script src="scriptaa.js"></script>
+</body>
+</html>
