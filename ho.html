@@ -226,7 +226,7 @@
   /* Contenedor principal de productos */
   .product-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Configura columnas adaptables */
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
       justify-content: center;
       padding: 30px 10px;
@@ -239,7 +239,7 @@
   .product-card {
       background-color: #ffffff;
       border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       cursor: pointer;
       text-align: center;
@@ -249,22 +249,26 @@
       justify-content: space-between;
   }
 
+  /* Efecto hover para cada tarjeta */
   .product-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
 
   /* Imagen de producto */
   .product-image {
-      width: 85%;
-      height: 200px;
+      width: 100%;
+      height: 300px;
       background-size: cover;
       background-position: center;
       transition: transform 0.5s ease;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
   }
 
+  /* Aumenta el tamaño de la imagen en hover */
   .product-card:hover .product-image {
-      transform: scale(1.08);
+      transform: scale(1.05);
   }
 
   /* Información del producto */
@@ -272,6 +276,7 @@
       padding: 15px;
   }
 
+  /* Nombre del producto */
   .product-name {
       font-family: 'Georgia', serif;
       font-size: 1.1rem;
@@ -280,11 +285,18 @@
       margin-bottom: 5px;
   }
 
-  /* Agregar borde inferior dorado */
+  /* Descripción del producto */
+  .product-description {
+      font-size: 0.9rem;
+      color: #555;
+      opacity: 0.8;
+  }
+
+  /* Borde inferior dorado en cada tarjeta */
   .product-card::after {
       content: '';
       display: block;
-      height: 5px;
+      height: 4px;
       background-color: #b48800;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
